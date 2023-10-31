@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* In your CSS or SCSS file */
+/* @import 'swiper/swiper-bundle.min.css'; */
+
+.sidebar {
+  animation: slideleft 0.3s ease-in-out;
+}
+.sidebaroverlay {
+  animation: scaleup 0.2s ease-in-out;
+}
+@keyframes scaleup {
+  0% {
+    /* transform: scale(0); */
+    opacity: 0;
+  }
+  80% {
+    /* transform: scale(1.2); */
+  }
+  100% {
+    /* transform: scale(1); */
+    opacity: 1;
+  }
+}
+@keyframes slideleft {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+.bgclip {
+  background-image: url("./containers/assets/ctaBG2.jpg");
+  background-size: cover;
+  color: transparent;
+}
+.bgclip2 {
+  background-image: url("./containers/assets/ctaBG2.jpg");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* background-position: fixed; */
+}
+.bgpic {
+  background-image: url("./containers/assets/client_bg.jpg");
+  background-size: cover;
+  /* background-clip: text; */
+  background-position: center;
+  /* background-position: fixed; */
+  background-repeat: no-repeat;
+  /* color: transparent; */
+}
+/* Add this to your CSS file */
+.carousel-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+.carousel-button:hover {
+  color: #bada55;
+}
+.custom-dropdown {
+  position: relative;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.dropdown-header {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  background-color: white;
+  /* border-top: none; */
+  display: none;
+}
+
+.custom-dropdown.open .dropdown-options {
+  display: block;
+}
+
+.option {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+.loader-container{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left:0;
+  background-color:#fafaff;
+  justify-content: center;
+  align-items: center;
+}
+.loader-spinner{
+  width: 8rem;
+  height: 8rem;
+  border-radius:50%;
+  border-top: 2px solid black;
+  animation: spinner 0.5s infinite linear;
+}
+@keyframes spinner{
+  100%{
+    transform: rotate(360deg);
+  }
+}
